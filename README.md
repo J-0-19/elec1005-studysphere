@@ -51,3 +51,6 @@ user_goal_ tracker, https://unisydneyedu.sharepoint.com/sites/elec1005-studysphe
 
 link to figma team projects from previous assignment 1:
 https://www.figma.com/design/izUGnSW1ETpaHTOXcaCY9I/Microsoft-Power-Apps---Create-Apps-from-Figma-UI-Kit-(Preview)-(Community)?node-id=0-1&t=wMw0ZwE8L3M4dXnc-0
+
+google document for collaboration:
+https://docs.google.com/document/d/1kqyc3H-LYU2mmgydC3fRFh4PHM_li6yt8Oe4tFw1u2E/edit?usp=sharing
