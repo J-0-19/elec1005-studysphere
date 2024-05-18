@@ -25,6 +25,7 @@ powerapps:
 notif
 TASK M.
 FORMATING DETAILS
+list of the notification (reminder part)
 
 report:
 user manual 
