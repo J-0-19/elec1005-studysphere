@@ -55,4 +55,8 @@ Grade Calculator:
   Text(gpa)
 
 NAME, SECTION,
-CODE:
+CODE:If(
+    CountRows(Filter(SelectedDatesCollection, Date = DatePicker1.SelectedDate)) > 0,
+    Remove(SelectedDatesCollection, Date = DatePicker1.SelectedDate),
+    Collect(SelectedDatesCollection, {Date: DatePicker1.SelectedDate})
+)
