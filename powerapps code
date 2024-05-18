@@ -60,3 +60,24 @@ Reset(start_date);
 Reset(deadline_date);
 
 Navigate('Task page')
+
+enter task page code:
+Patch( 
+    user_goal_tracker,
+    Defaults(user_goal_tracker),
+    {
+        Title: goal_title_input.Text,
+        Description: description.Text,
+        'Deadine ':: deadline_date.SelectedDate,
+
+
+    }
+
+);
+
+
+Reset(goal_title_input);
+Reset(description);
+Reset(deadline_date);
+
+Navigate('Task page')
