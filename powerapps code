@@ -1,0 +1,83 @@
+Grade Calculator:
+  code for Button1:
+  UpdateContext({gpa: 
+      (
+          If(Value(TextInput2.Text) >= 1, Value(TextInput3.Text) * Value(TextInput3_1.Text), 0) + 
+          If(Value(TextInput2.Text) >= 2, Value(TextInput3_2.Text) * Value(TextInput3_3.Text), 0) + 
+          If(Value(TextInput2.Text) >= 3, Value(TextInput3_4.Text) * Value(TextInput3_5.Text), 0) + 
+          If(Value(TextInput2.Text) >= 4, Value(TextInput3_6.Text) * Value(TextInput3_7.Text), 0) + 
+          If(Value(TextInput2.Text) >= 5, Value(TextInput3_8.Text) * Value(TextInput3_9.Text), 0)
+      ) / 
+      (
+          If(Value(TextInput2.Text) >= 1, Value(TextInput3_1.Text), 0) + 
+          If(Value(TextInput2.Text) >= 2, Value(TextInput3_3.Text), 0) + 
+          If(Value(TextInput2.Text) >= 3, Value(TextInput3_5.Text), 0) + 
+          If(Value(TextInput2.Text) >= 4, Value(TextInput3_7.Text), 0) + 
+          If(Value(TextInput2.Text) >= 5, Value(TextInput3_9.Text), 0)
+      )
+  });
+
+  code for Button1_1:
+  Reset(TextInput2);
+  Reset(TextInput3);
+  Reset(TextInput3_1);
+  Reset(TextInput3_2);
+  Reset(TextInput3_3);
+  Reset(TextInput3_4);
+  Reset(TextInput3_5);
+  Reset(TextInput3_6);
+  Reset(TextInput3_7);
+  Reset(TextInput3_8);
+  Reset(TextInput3_9);
+
+  code for Label1:
+  Text(gpa)
+
+NAME, SECTION,
+CODE:If(
+    CountRows(Filter(SelectedDatesCollection, Date = DatePicker1.SelectedDate)) > 0,
+    Remove(SelectedDatesCollection, Date = DatePicker1.SelectedDate),
+    Collect(SelectedDatesCollection, {Date: DatePicker1.SelectedDate})
+)
+
+
+Enter task section code:
+Patch( 
+    user_goal_tracker,
+    Defaults(user_goal_tracker),
+    {
+        Title: goal_title_input.Text,
+        Description: description.Text,
+        'Start ': start_date.SelectedDate,
+        'Deadine ':deadline_date.SelectedDate
+    }
+
+);
+
+Reset(goal_title_input);
+Reset(description);
+Reset(start_date);
+Reset(deadline_date);
+
+Navigate('Task page')
+
+enter task page code:
+Patch( 
+    user_goal_tracker,
+    Defaults(user_goal_tracker),
+    {
+        Title: goal_title_input.Text,
+        Description: description.Text,
+        'Deadine ':: deadline_date.SelectedDate,
+
+
+    }
+
+);
+
+
+Reset(goal_title_input);
+Reset(description);
+Reset(deadline_date);
+
+Navigate('Task page')
