@@ -40,47 +40,37 @@ CODE:If(
     Collect(SelectedDatesCollection, {Date: DatePicker1.SelectedDate})
 )
 
-
-Enter task section code:
-Patch( 
-    user_goal_tracker,
-    Defaults(user_goal_tracker),
+Enter task code:
+Patch(
+    task_tracker,
+    Defaults(task_tracker),
     {
-        Title: goal_title_input.Text,
-        Description: description.Text,
-        'Start ': start_date.SelectedDate,
-        'Deadine ':deadline_date.SelectedDate
+        'Unit _name': units_Dropdown.SelectedText,
+        Description: task_description_input.Text,
+        'Deadine ': due_date.SelectedDate,
+        Name: task_name_input.Text        
     }
-
 );
 
-Reset(goal_title_input);
-Reset(description);
-Reset(start_date);
-Reset(deadline_date);
+Reset(units_Dropdown);
+Reset(task_name_input);
+Reset(task_description_input);
 
 Navigate('Task page')
 
-enter task page code:
-Patch( 
-    user_goal_tracker,
-    Defaults(user_goal_tracker),
+Add units code: 
+Patch(
+    Units,
+    Defaults(Units),
     {
-        Title: goal_title_input.Text,
-        Description: description.Text,
-        'Deadine ':: deadline_date.SelectedDate,
-
-
+        Title: unit_name_input.Text,
+        'unit description': unit_description_input.Text
     }
-
 );
+Reset(unit_name_input);
+Reset(unit_description_input);
+Navigate(units)
 
-
-Reset(goal_title_input);
-Reset(description);
-Reset(deadline_date);
-
-Navigate('Task page')
 
 login code:
 If(
