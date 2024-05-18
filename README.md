@@ -62,3 +62,16 @@ CODE:If(
     Remove(SelectedDatesCollection, Date = DatePicker1.SelectedDate),
     Collect(SelectedDatesCollection, {Date: DatePicker1.SelectedDate})
 )
+
+What do we have left:
+powerapps:
+notif
+TASK M.
+FORMATING DETAILS
+
+report:
+user manual 
+testcases (5 to 6 each functions)
+ss of testcase outcome
+jira
+github 
