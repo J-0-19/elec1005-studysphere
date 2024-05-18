@@ -5,6 +5,7 @@ ELEC1005 FINAL PROJECT
 #HI! (Sarah Aiko)
 #HI! (Zeheng Li)
 #HI! (Houda)
+#HI! (Ellie)
 hey guys so i dont thinks theres much left other than the report its self 
 maybe the testcases too 
 also if there is any code you can sned here that would be great 
