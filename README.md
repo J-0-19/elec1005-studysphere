@@ -33,6 +33,29 @@ ss of testcase outcome
 jira
 github 
 
+testcases:
+user login
+user sign up
+(1. if log in is empty it should fail. 
+2. if log in is right with correct user details. 
+3. if log in is wrong then doesn't log in)
+
+dashboard 
+course adding unit
+entering task 
+grades calculation
+task input into calender
+
+
+
+
+
+
+
+
+
+
+
 links:
 
 Zoom metting:
