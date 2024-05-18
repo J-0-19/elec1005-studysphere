@@ -46,13 +46,91 @@ entering task
 grades calculation
 task input into calender
 
+usermanual:
+User Manual
+User Manual should be able to find a list of all functions you have implemented and come with a description of how to use them
 
+Welcome to your app's user manual. The purpose of this app is to help with efficient management of course units, tasks, grades, and reminders for students. To learn how to navigate and utilise the features of the app, refer to this guide.
 
+Getting started
+Accessing the app;
+To access the app, you need a valid email account. Ensure you have the necessary credentials before attempting to log in or sign up.
 
+System Requirements
+A device with internet access
+A valid email account 
 
+User Interface Overview:
+Login Page
+The login page is the initial screen you will see. It requires your email and password to access the app.
 
+Sign-Up Page
+If you are a new user, you can register by clicking the "Sign Up" button on the login page. You will need to provide basic information like your name, email, and password.
 
+Dashboard
+After logging in, you will be directed to the dashboard. The dashboard serves as the central hub, guiding you to various sections of the app. From here, you can access course units, tasks, grades, calendar, reminders, and the WAM calculator.
 
+Functions:
+Task Management 
+Description: Allows users to add and manage tasks related to their courses.
+How to Use:
+From the dashboard, click on the "Task Management" section.
+Enter the task details, including the course unit, task description, and due date.
+Click the "Add Task" button to save the task.
+View and manage your tasks from the task list.
+
+Grades List Page -> Task List Page
+Description: Provides an overview of grades for each course and the tasks associated with them.
+How to Use:
+From the dashboard, click on the "Grades List" section.
+Select a course to view the list of tasks and their associated grades.
+View and manage tasks directly from this page.
+
+Calendar
+Description: Displays a calendar view of tasks and important dates.
+How to Use:
+From the dashboard, click on the "Calendar" section.
+View tasks and important dates on the calendar.
+Click on a date to see more details about the tasks or events scheduled for that day.
+
+Reminder
+Description: Allows users to set reminders for tasks and important dates.
+How to Use:
+From the dashboard, click on the "Reminder" section.
+Enter the details of the reminder, including the task or event and the reminder date/time.
+Click the "Set Reminder" button to save it.
+View and manage reminders from the reminders list.
+
+Grade (WAM) Calculator
+Description: Calculates the Weighted Average Mark (WAM) based on the grades entered.
+How to Use:
+From the dashboard, click on the "WAM Calculator" section.
+Enter your grades and their respective weights.
+Click the "Calculate" button to get your WAM.
+View the calculated WAM on the same page.
+
+Course Unit Addition List
+Description: Allows users to add and view their course units.
+How to Use:
+From the dashboard, click on the "Course Unit Addition" section.
+Enter the details of your course units in the provided fields.
+Click the "Add" button to save the course unit.
+View the list of added course units on the same page.
+
+Guides Text of Functionalities Provided in the App
+Description: provides details of all functions in the app 
+How to Use:
+From the dashboard click on the “?” section.
+all descriptions will be shown.
+
+Troubleshooting
+Common Issues and Solutions
+Unable to log in: Ensure your email and password are correct. If you forgot your password, use the "Forgot Password" link on the login page.
+Unable to sign up: Ensure all required fields are filled correctly and the email is not already in use.
+Data not saving: Check your internet connection and ensure all required fields are filled before saving.
+
+Contact Support
+If you encounter any issues that you cannot resolve, please contact our support team at studyspheresupport@gmail.com. Provide as much detail as possible about the issue for a quicker resolution.
 
 
 
