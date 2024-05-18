@@ -75,3 +75,5 @@ testcases (5 to 6 each functions)
 ss of testcase outcome
 jira
 github 
+
+link to sharepoint: user_goal_ tracker, https://unisydneyedu.sharepoint.com/sites/elec1005-studysphere/Lists/Goal%20%20Tracker/AllItems.aspx 
