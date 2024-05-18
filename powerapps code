@@ -39,3 +39,24 @@ CODE:If(
     Remove(SelectedDatesCollection, Date = DatePicker1.SelectedDate),
     Collect(SelectedDatesCollection, {Date: DatePicker1.SelectedDate})
 )
+
+
+Enter task section code:
+Patch( 
+    user_goal_tracker,
+    Defaults(user_goal_tracker),
+    {
+        Title: goal_title_input.Text,
+        Description: description.Text,
+        'Start ': start_date.SelectedDate,
+        'Deadine ':deadline_date.SelectedDate
+    }
+
+);
+
+Reset(goal_title_input);
+Reset(description);
+Reset(start_date);
+Reset(deadline_date);
+
+Navigate('Task page')
