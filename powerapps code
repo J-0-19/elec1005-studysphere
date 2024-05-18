@@ -81,3 +81,54 @@ Reset(description);
 Reset(deadline_date);
 
 Navigate('Task page')
+
+login code:
+If(
+    !IsBlank(
+        LookUp(
+            user_info,
+            User_name = username.Text && Password = unikey.Text
+        )
+    ),
+    // If login successful
+    Navigate(dashboard);
+    Reset(username);
+    Reset(unikey),
+    // If login failed
+    Notify(
+        "Incorrect login details",
+        NotificationType.Error
+    )
+)
+
+sign in page code:
+
+If(
+    new_password.Text <> new_password_1.Text,
+    Notify(
+        "Passwords do not match",
+        NotificationType.Error
+    ),
+    Patch(
+        user_info,
+        Defaults(user_info),
+        {
+            User_name: new_username.Text,
+            'Email-Address': email.Text,
+            Password: new_password.Text
+        }
+    );
+    Navigate(
+        userprofilelogin,
+        ScreenTransition.Fade
+    );
+    UpdateContext({ShowForgetMessage: true});
+    Notify(
+        "User registered successfully",
+        NotificationType.Success
+    );
+    Reset(new_username);
+    Reset(email);
+    Reset(new_password);
+    Reset(new_password_1)
+
