@@ -78,3 +78,5 @@ jira
 github 
 
 link to sharepoint: user_goal_ tracker, https://unisydneyedu.sharepoint.com/sites/elec1005-studysphere/Lists/Goal%20%20Tracker/AllItems.aspx 
+
+link to figma team projects from previous assignment 1: https://www.figma.com/design/izUGnSW1ETpaHTOXcaCY9I/Microsoft-Power-Apps---Create-Apps-from-Figma-UI-Kit-(Preview)-(Community)?node-id=0-1&t=wMw0ZwE8L3M4dXnc-0
