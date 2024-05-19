@@ -34,11 +34,35 @@ Grade Calculator:
   Text(gpa)
 
 NAME, SECTION,
-CODE:If(
-    CountRows(Filter(SelectedDatesCollection, Date = DatePicker1.SelectedDate)) > 0,
-    Remove(SelectedDatesCollection, Date = DatePicker1.SelectedDate),
-    Collect(SelectedDatesCollection, {Date: DatePicker1.SelectedDate})
+CODE:
+calendar
+code for dropdown calendar section3:
+/*retrieves calendar events for all days in current month view and selected calendar 
+_minDate and _maxDate act as markers to prevent duplicate data collection*/         
+If(IsBlank(_userDomain),         
+	UpdateContext({_showLoading: true});         
+	Set(_userDomain, Right(User().Email, Len(User().Email) - Find("@", User().Email)));         
+	Set(_dateSelected, Today());         
+	Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), TimeUnit.Days));         
+	Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));         
+	Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, TimeUnit.Months), -1, TimeUnit.Days))         
+);         
+Set(_calendarVisible, false);         
+UpdateContext({_showLoading: true});         
+Set(_myCalendar, Self.Selected);         
+Set(_minDate, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days));         
+Set(_maxDate, DateAdd(DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), TimeUnit.Days), 40, TimeUnit.Days));         
+ClearCollect(MyCalendarEvents, Office365Outlook.GetEventsCalendarViewV2(_myCalendar.Name, Text(_minDate, DateTimeFormat.UTC), Text(_maxDate, DateTimeFormat.UTC)).value);         
+UpdateContext({_showLoading: false});         
+Set(_calendarVisible, true)
+code for button5:
+If(
+    GroupVisible,
+    UpdateContext({GroupVisible: false}),
+    UpdateContext({GroupVisible: true})
 )
+code for MonthDayGallery3:
+UpdateContext({SelectedDate: Today()})
 
 Enter task code:
 Patch(
