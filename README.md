@@ -133,6 +133,7 @@ Data not saving: Check your internet connection and ensure all required fields a
 Contact Support
 If you encounter any issues that you cannot resolve, please contact our support team at studyspheresupport@gmail.com. Provide as much detail as possible about the issue for a quicker resolution.
 
+for the v &v section contents canbe found in lectures for week 8 and week 9 
 
 
 links:
