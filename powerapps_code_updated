@@ -1,1 +1,107 @@
+Login page code:
+Set(CurrentUsername, username.Text);
 
+If(
+    !IsBlank(
+        LookUp(
+            'User Data',
+            Username = username.Text && Password = unikey.Text
+            
+        )
+    ),
+    Navigate(dashboard);
+    Reset(username);
+    Reset(unikey),
+    Navigate(userprofilelogin_1);
+    Reset(username);
+    Reset(unikey)
+)
+Sign up page code:
+If(
+    new_password.Text <> new_password_1.Text,
+    Navigate(userprofilelogin_2),
+    Patch(
+        'User Data',
+        Defaults('User Data'),
+        {
+            Username: new_username.Text,
+            Email: email.Text,
+            Password: new_password.Text
+        }
+    );
+    Navigate(
+        dashboard,
+        ScreenTransition.Fade
+    );
+    UpdateContext({ShowForgetMessage: true});
+    Reset(new_username);
+    Reset(email);
+    Reset(new_password);
+    Reset(new_password_1)
+)
+
+Add grades page code:
+Patch(
+    Grades_1,
+    Defaults(Grades_1), 
+    {
+        Grade: task_name_input_1.Text
+    }
+);
+
+Reset(units_Dropdown_1);
+Reset(task_name_input_1);
+Navigate(Grades, ScreenTransition.Fade);
+
+Enter task page code:
+atch(
+    Tasks,
+    Defaults(Tasks), 
+    {
+        Task: task_name_input.Text,
+        Description: task_description_input.Text,
+        'Due Date': due_date.SelectedDate,
+        Username: username 
+    }
+);
+
+
+Reset(units_Dropdown);
+Reset(task_name_input);
+Reset(task_description_input);
+Reset(due_date);
+Navigate(Taskpage, ScreenTransition.Fade);
+
+Calculator code:
+UpdateContext({gpa: 
+    (
+        If(Value(TextInput2.Text) >= 1, Value(TextInput3.Text) * Value(TextInput3_1.Text), 0) + 
+        If(Value(TextInput2.Text) >= 2, Value(TextInput3_2.Text) * Value(TextInput3_3.Text), 0) + 
+        If(Value(TextInput2.Text) >= 3, Value(TextInput3_4.Text) * Value(TextInput3_5.Text), 0) + 
+        If(Value(TextInput2.Text) >= 4, Value(TextInput3_6.Text) * Value(TextInput3_7.Text), 0) + 
+        If(Value(TextInput2.Text) >= 5, Value(TextInput3_8.Text) * Value(TextInput3_9.Text), 0)
+    ) / 
+    (
+        If(Value(TextInput2.Text) >= 1, Value(TextInput3_1.Text), 0) + 
+        If(Value(TextInput2.Text) >= 2, Value(TextInput3_3.Text), 0) + 
+        If(Value(TextInput2.Text) >= 3, Value(TextInput3_5.Text), 0) + 
+        If(Value(TextInput2.Text) >= 4, Value(TextInput3_7.Text), 0) + 
+        If(Value(TextInput2.Text) >= 5, Value(TextInput3_9.Text), 0)
+    )
+});
+Add units code:
+Patch(
+        Units,
+        Defaults(Units),
+        {
+            Username: username,
+            'Unit Name': unit_name_input.Text,
+            'Unit Description': unit_description_input.Text
+        }
+    );
+    Reset(unit_name_input);
+    Reset(unit_description_input);
+    Navigate(
+        units,
+        ScreenTransition.Fade
+    )
